@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
+        <title>Form</title>
+    </head>
+    <body>
+        <form class="form">
+            <div class="form__caption">Регистрация</div>
+
+            <div class="form__body">
+
+            <div class="form__item">
+                <label class="form__lebel" for="email">E-mail</label>
+                <input class="form__input" type="email" placeholder="example@site.domain" name="email" required>
+            </div>
+
+            <div class=" form__item_row">
+
+                <div class="form__item form__item_password">
+                    <label class="form__lebel" for="psw">Пароль</label>
+                    <input class="form__input" type="password" placeholder="password" name="psw" required>
+                </div>
+
+                <div class="form__item form__item_password">
+                    <label class="form__lebel" for="psw-repeat">Повторите пароль</label>
+                    <input class="form__input" type="password" placeholder="password" name="psw-repeat" required>
+                </div>
+
+            </div>
+
+            <div class="form__item">
+                <label class="form__lebel" for="name">ФИО</label>
+                <input class="form__input" type="text" placeholder="Гусев Антон Игоревич" name="name" required>
+            </div>
+
+            <div class="form__item">
+                <label class="form__lebel" for="age">Возраст</label>
+                <input class="form__input form__input_age" type="numder" placeholder="18" name="age" required>
+            </div>
+
+
+            </div>
+
+            <div class="form__footer">
+                <button class="form__button form__button_submit" type="submit" >Отправить</button>
+                <button class="form__button form__button_cansel">Отмена</button>
+            </div>
+        </form>
+
+    </body>
+</html>
