@@ -134,3 +134,20 @@ body {
     color: #CCCCCC;
     padding: 10px 6px;
 }
+
+.none {
+    display: none;
+}
+
+.visible {
+    display: block;
+    position: absolute;
+    top: 70px;
+}
+
+.promt {
+    background: wheat;
+    font-size: 10px;
+    padding: 3px;
+    color: black;
+}

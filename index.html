@@ -6,7 +6,7 @@
         <title>Form</title>
     </head>
     <body>
-        <form class="form">
+        <form class="form" onsubmit="ifSubmit (); ifPasswordEquelly ? alert('Сообщение отправлено'): alert('не отправлено')">
             <div class="form__caption">Регистрация</div>
 
             <div class="form__body">
@@ -20,12 +20,17 @@
 
                 <div class="form__item form__item_password">
                     <label class="form__lebel" for="psw">Пароль</label>
-                    <input class="form__input" type="password" placeholder="password" name="psw" required>
+                    <input id="psw" class="form__input" onchange="onchangePromt ()" type="password" placeholder="password" name="psw" required>
                 </div>
 
                 <div class="form__item form__item_password">
                     <label class="form__lebel" for="psw-repeat">Повторите пароль</label>
-                    <input class="form__input" type="password" placeholder="password" name="psw-repeat" required>
+                    <input id="psw_repeat" class="form__input" onchange="onchangePromt ()" type="password" placeholder="password" name="psw-repeat" required>
+                    <div id="promt" class="none">
+                        <div class="promt">
+                            Пароли не совпадают!!!
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -37,7 +42,7 @@
 
             <div class="form__item">
                 <label class="form__lebel" for="age">Возраст</label>
-                <input class="form__input form__input_age" type="numder" placeholder="18" name="age" required>
+                <input class="form__input form__input_age" type="number" min="3" placeholder="18" name="age" required>
             </div>
 
 
@@ -45,9 +50,10 @@
 
             <div class="form__footer">
                 <button class="form__button form__button_submit" type="submit" >Отправить</button>
-                <button class="form__button form__button_cansel">Отмена</button>
+                <button class="form__button form__button_cansel" onclick="delPromt ()" type="reset">Отмена</button>
             </div>
         </form>
+        <script src="script.js"></script>
 
     </body>
 </html>
